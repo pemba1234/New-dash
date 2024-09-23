@@ -1,11 +1,27 @@
 import "./login.css";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { getData } from "../api/AxiosRequest";
 
 export default function Login() {
+  const [Authentication, setAuthentication] = useState([]);
+
+  const getAuthentication = async () => {
+    const data = await getData("authentications");
+    setAuthentication(data);
+  };
+
+  useEffect(() => {
+    getAuthentication();
+  }, []);
+
   return (
     <>
       <div className="login d-flex align-items-center">
-        <form action="" className="form d-flex flex-column shadow-lg p-5">
+        <form
+          action=""
+          className="form d-flex flex-column shadow-lg p-5 bg-white"
+        >
           <header className="d-flex justify-content-center mb-3 fs-2">
             sneat
           </header>

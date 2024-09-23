@@ -29,6 +29,7 @@ export default function HeroPage() {
               <img className="bg-white " src={Man} alt="" />
             </div>
           </div>
+          <div className=""></div>
         </div>
       </div>
     </>

@@ -26,7 +26,7 @@ export default function Search() {
           <div className="ms-2">
             <button
               onClick={Menu}
-              class="navbar-toggler"
+              className="navbar-toggler"
               data-bs-toggle="collapse"
               data-bs-target="#navbarToggle"
               aria-controls="navbarToggle"

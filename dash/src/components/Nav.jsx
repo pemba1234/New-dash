@@ -1,5 +1,6 @@
 import "./Nav.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -27,6 +28,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Nav() {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const usetoggle = () => setIsCollapsed(!isCollapsed);
   return (
     <>
       <nav className="show shadow bg-white position-fixed ps-2" id="navbar">
@@ -42,15 +45,7 @@ export default function Nav() {
         <div className="accordion" id="Navbar">
           <div className="component mb-3 pt-2 mt-4">
             <button
-              onClick={() => {
-                let x = document.getElementById("angle");
-
-                if (x.style.transform === "rotate(0deg)") {
-                  x.style.transform = "rotate(90deg)";
-                } else {
-                  x.style.transform = "rotate(0deg)";
-                }
-              }}
+              onClick={usetoggle}
               className="d-flex border-0 bg-white "
               data-bs-toggle="collapse"
               href="#dashboardCollapse"
@@ -71,7 +66,7 @@ export default function Nav() {
               </div>
             </button>
             <div
-              className="collapse show"
+              className="collapse"
               id="dashboardCollapse"
               data-bs-parent="#Navbar"
             >

@@ -11,7 +11,7 @@ export default function Register() {
       <div className="login d-flex align-items-center">
         <form
           action=""
-          className="form d-flex col-lg-4 flex-column shadow-lg p-5"
+          className="form d-flex col-lg-4 flex-column shadow-lg p-5 bg-white"
         >
           <header className="d-flex justify-content-center mb-3 fs-2">
             sneat
