@@ -14,7 +14,7 @@ export default function Search() {
       <div className="d-lg-flex col-12 justify-content-end">
         <div
           className="rounded-3 p-3 d-flex bg-white border-0 me-lg-5
-      justify-content-between shadow-sm col-lg-9 col-12 mt-3"
+      justify-content-between shadow col-lg-9 col-12 mt-3"
         >
           <div className="input w-25 ms-lg-3">
             <input

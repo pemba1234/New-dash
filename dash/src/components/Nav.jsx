@@ -76,7 +76,7 @@ export default function Nav() {
               data-bs-parent="#Navbar"
             >
               <ul className="drop-menu d-flex flex-column">
-                <Link className="drop-item d-flex ps-4 me-3 p-2" to="/heropage">
+                <Link className="drop-item d-flex ps-4 me-3 p-2" to="/">
                   <div className="text-icon mt-1 me-4">
                     <FontAwesomeIcon icon={faCircle} className="fa-icon" />
                   </div>

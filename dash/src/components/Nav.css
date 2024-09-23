@@ -26,6 +26,10 @@ nav {
     z-index: 999;
 }
 
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
 
 .hero .position-fixed{
     width:270px;
