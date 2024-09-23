@@ -1,0 +1,97 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #fbf9fe;
+}
+
+nav {
+    width:280px;
+    height: 100%; 
+    overflow: auto;
+}
+
+#navbar {
+    top: 0;
+    margin-left: 0%;
+    box-shadow: 0 0 25px 20px white;
+}
+
+.hero .bg-white {
+    z-index:1000 ;
+}
+  
+#angle {
+    z-index: 999;
+}
+
+
+.hero .position-fixed{
+    width:270px;
+    box-shadow: -10px 1px 25px 20px white;
+    top: 0;
+} 
+
+
+/* --------------Hero Main------------------- */
+
+
+.component .text {
+    color: #7678fb;
+    background-color: #e4e5ff;
+    width: 250px;
+    justify-content: space-between;
+}
+
+.five{
+    border-radius: 40%;
+    padding: 1px 9px;
+}
+
+.hero {
+    padding: 20px 0;
+}
+
+.badge {
+    width:30px;
+}
+
+.drop-item{
+    border-radius: 10px;
+}
+
+.icon {
+    font-size: 18px;
+}
+
+#angle {
+    transform: rotate(90deg);
+    font-weight: 700;
+    z-index: 999;
+    transition: all ease 0.5s;
+}
+
+.drop-item:hover{
+    background-color: rgb(229, 229, 229);
+    transition: all ease-in .5s;
+    border-radius: 10px;
+}
+
+.drop-item:hover .fa-icon{
+    transition: all ease-in;
+    color: #7678fb;
+    border-radius: 50%;
+}
+
+.fa-icon{
+    color: rgb(165, 165, 165);
+    font-size: 8px;
+    margin-bottom: 6.5px;
+}
+
+@media only screen and (max-width: 1260px){
+    .show {
+        display: none;
+    }
+}

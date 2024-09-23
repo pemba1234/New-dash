@@ -1,0 +1,17 @@
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #b086f3;
+}
+
+.inner {
+    font-size: 15px;
+    text-align: justify;
+}
+
+section .text-primary{
+    width:100px;
+    font-size: 15px;
+}
