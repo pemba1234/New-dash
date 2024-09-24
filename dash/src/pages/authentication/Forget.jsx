@@ -33,7 +33,7 @@ export default function Forget() {
             Send Reset Link
           </button>
           <div className="footer d-flex mt-4 justify-content-center">
-            <Link to="/login">
+            <Link to="/login" className="text-primary">
               <FaAngleLeft />
               Back to login
             </Link>

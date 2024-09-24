@@ -4,7 +4,7 @@ import { FaAngleLeft } from "react-icons/fa";
 export default function Register() {
   return (
     <>
-      <Link to="/login" className="position-fixed">
+      <Link to="/login" className="position-fixed text-primary">
         <FaAngleLeft />
         Back to login
       </Link>
@@ -52,7 +52,9 @@ export default function Register() {
           <div className="two d-flex justify-content-between p-2 mt-3 mb-3">
             <label htmlFor="">
               <input type="checkbox" /> I agree to{" "}
-              <Link to="/forget">privacy policy & terms</Link>
+              <Link to="/forget" className="text-primary">
+                privacy policy & terms
+              </Link>
             </label>
           </div>
           <button className="border-0 bg-primary text-white rounded-3 p-2">
@@ -61,7 +63,10 @@ export default function Register() {
           <div className="footer d-flex mt-4 justify-content-center">
             <p>
               Already have an account?{" "}
-              <Link to="/create"> Sign in instead</Link>
+              <Link to="/create" className="primary">
+                {" "}
+                Sign in instead
+              </Link>
             </p>
           </div>
         </form>

@@ -62,7 +62,7 @@ a{
 }
 
 #angle {
-    transform: rotate(90deg);
+    /* transform: rotate(90deg); */
     font-weight: 700;
     z-index: 999;
     transition: all ease 0.5s;

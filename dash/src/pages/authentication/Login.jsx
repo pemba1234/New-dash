@@ -1,19 +1,19 @@
 import "./login.css";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { getData } from "../api/AxiosRequest";
+// import { useState, useEffect } from "react";
+// import { getData } from "../api/AxiosRequest";
 
 export default function Login() {
-  const [Authentication, setAuthentication] = useState([]);
+  // const [Authentication, setAuthentication] = useState([]);
 
-  const getAuthentication = async () => {
-    const data = await getData("authentications");
-    setAuthentication(data);
-  };
+  // const getAuthentication = async () => {
+  //   const data = await getData("authentications");
+  //   setAuthentication(data);
+  // };
 
-  useEffect(() => {
-    getAuthentication();
-  }, []);
+  // useEffect(() => {
+  //   getAuthentication();
+  // }, []);
 
   return (
     <>
@@ -53,14 +53,20 @@ export default function Login() {
             <label htmlFor="">
               <input type="checkbox" /> Remember me
             </label>
-            <Link to="/forget-password">Forget Password?</Link>
+            <Link to="/forget-password" className="text-primary">
+              Forget Password?
+            </Link>
           </div>
           <button className="border-0 bg-primary text-white rounded-3 p-2">
             Login
           </button>
           <div className="footer d-flex mt-4 justify-content-center">
             <p>
-              New on our platform?<Link to="/register"> Create an account</Link>
+              New on our platform?
+              <Link to="/register" className="text-primary">
+                {" "}
+                Create an account
+              </Link>
             </p>
           </div>
         </form>
