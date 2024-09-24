@@ -39,7 +39,7 @@ export default function Crm() {
                 </div>
               </div>
               <div
-                class="col-lg-12 col-11 bg-white shadow mb-3 ms-lg-2"
+                class="col-lg-12 col-11 bg-white shadow mb-3 ms-lg-2 rounded"
                 id="column"
               >
                 Box-5
@@ -55,8 +55,35 @@ export default function Crm() {
               Box-7
             </div>
           </div> */}
+
+          <div
+            class="col-lg-7 col-12 bg-white shadow me-3 mb-3 ms-4 rounded"
+            id="column2"
+          >
+            Box-1
+            <div class="d-flex flex-column  col-lg-7 col-12">
+              <div className="box d-flex col-12 flex-lg-row flex-md-row flex-column">
+                <div
+                  class="col-lg-6 col-md-5 col-11 bg-white shadow mb-3 me-3 rounded"
+                  id="column3"
+                >
+                  Box-5
+                </div>
+              </div>
+              <div className="container">
+                <div className="row">
+                  <div className=" col-sm-9 border-1 shadow bg-white rounded " id="column4">
+                    column
+                  </div>
+                  <div className=" col-sm-9 border-1 shadow  bg-white  rounded " id="column5">
+                    column
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
   );
-}
+};
