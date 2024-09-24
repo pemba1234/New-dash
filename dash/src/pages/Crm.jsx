@@ -72,13 +72,49 @@ export default function Crm() {
               </div>
               <div className="container">
                 <div className="row">
-                  <div className=" col-sm-9 border-1 shadow bg-white rounded " id="column4">
+                  <div
+                    className=" col-sm-9 border-1 shadow bg-white rounded "
+                    id="column4"
+                  >
                     column
                   </div>
-                  <div className=" col-sm-9 border-1 shadow  bg-white  rounded " id="column5">
+                  <div
+                    className=" col-sm-9 border-1 shadow  bg-white  rounded "
+                    id="column5"
+                  >
                     column
+                  </div>
+
+                  <div className="container  ">
+                    <div className="row ">
+                      <div className="col d-flex ">
+                        <div
+                          className="mt-4 col-lg-12 col-12 float-lg-end col-md-12 bg-white  rounded "
+                          id="column6"
+                        >
+                          column7
+                        </div>
+
+                        <div
+                          className="mt-4 ms-3 col-lg-12 col-12 float-lg-end col-md-12 bg-white  rounded"
+                          id="column7"
+                        >
+                          column9
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div className="footer-bottom">
+              <p className="footer-bootom-left">© 2024, made with ❤️ <span className="Th">by ThemeSelection</span>
+              </p>
+              <div className="footer-boottom-right">
+                <p>License</p>
+                <p>License</p>
+                <p>Documentation</p>
+                <p>Support</p>
               </div>
             </div>
           </div>
@@ -86,4 +122,4 @@ export default function Crm() {
       </div>
     </>
   );
-};
+}
