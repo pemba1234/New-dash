@@ -1,4 +1,3 @@
-
 nav {
     width:280px;
     height: 100%; 
@@ -14,14 +13,14 @@ nav {
 .hero .bg-white {
     z-index:1000 ;
 }
-  
+
 #angle {
     z-index: 999;
 }
 
 a{
     text-decoration: none !important;
-    color: black !important;
+    color: rgb(86, 86, 86) !important;
 }
 
 .hero .position-fixed{
