@@ -28,6 +28,44 @@
 
 }
 
+#column6{
+    height: 330px;
+    width: 120%;
+}
+
+
+#column7{
+
+    width: 210%;
+
+}
+
+.footer-bottom{
+  
+     justify-content: space-between;
+     font-size: 15px;
+}
+
+
+.footer-bootom-left{
+    margin-top: 35px;
+    display: flex;
+    margin-left: 15px;
+}
+
+.footer-boottom-right{
+    margin-left: 120%;
+    margin-top: -39px;
+    display: flex;
+    gap: 20px;
+    color: #696cff;
+}
+
+.Th{
+    color: #696cff;
+}
+
+
 
 
 
@@ -43,5 +81,17 @@
 
     #column3{
         height: 300px;
+    }
+
+    #column4{
+        height: 300px;
+        width: 87%;
+    
+    }
+
+    #column7{
+
+        width: 210%;
+    
     }
 }
