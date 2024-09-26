@@ -16,8 +16,6 @@ import { IoLogoPaypal } from "react-icons/io5";
 import { FaRegCreditCard } from "react-icons/fa";
 import { FaFolderMinus } from "react-icons/fa6";
 
-// import React, { Component } from "react";
-
 const data = [{ value: 400 }, { value: 300 }, { value: 300 }, { value: 200 }];
 
 export default function HeroPage() {
@@ -207,9 +205,9 @@ export default function HeroPage() {
             </div>
           </div>
           {/* -------------------------------------------- */}
-          <div className="d-lg-flex flex-column col-lg-3 col-12">
-            <div className="d-flex">
-              <div className="box col-lg-7 h-auto col-6 shadow rounded h-100 bg-white me-3 p-4">
+          <div className="d-lg-flex flex-column col-lg-4 col-12">
+            <div className="d-flex col-lg-11">
+              <div className="box col-lg-6 h-auto col-6 shadow rounded h-100 bg-white me-3 p-4">
                 <div className="d-flex justify-content-between">
                   <div className="paypal p-2 border-0 rounded mb-2">
                     <IoLogoPaypal className="fs-4" />
@@ -245,7 +243,7 @@ export default function HeroPage() {
                 </span>
               </div>
               {/* ---------------------------------------------- */}
-              <div className="box col-lg-7 h-auto col-6 shadow rounded h-100 bg-white me-3 p-4">
+              <div className="box col-lg-6 h-auto col-6 shadow rounded h-100 bg-white me-3 p-4">
                 <div className="d-flex justify-content-between">
                   <div className="credit p-2 border-0 rounded mb-2">
                     <FaRegCreditCard className="fs-4" />
@@ -282,12 +280,17 @@ export default function HeroPage() {
               </div>
             </div>
             {/* ------------------------------------------ */}
-            <div className="col-12 shadow rounded mt-1 h-50 bg-white">
+            <div className="col-11 shadow text-center d-flex rounded mt-1 h-50 bg-white">
+              <div className="">
+                <p className="mt-5 fs-5">Profile Report</p>
+                <p className="ms-2 text-success border rounded border-success bg-light">
+                  Year 2022
+                </p>
+              </div>
               <LineChart
-                xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
                 series={[
                   {
-                    data: [2, 5.5, 2, 8.5, 1.5, 5],
+                    data: [2, 5.5, 2, 3.7, 4.45, 5.5, 8.5, 1.5, 5],
                   },
                 ]}
               />
@@ -296,6 +299,21 @@ export default function HeroPage() {
           </div>
           {/* ------------------------------------------------ */}
         </div>
+        {/* ------------------2nd div close----------- */}
+        <div className="col-11">
+          <div className="d-flex col-10 float-end justify-content-between ">
+            <div className="col-3 border  border-success shadow rounded">
+              Hello{" "}
+            </div>
+            <div className="col-3 border  border-success shadow rounded">
+              Hello
+            </div>
+            <div className="col-3 border  border-success shadow rounded">
+              Hello
+            </div>
+          </div>
+        </div>
+        {/* -----------last div--------------------- */}
       </div>
       {/* -------------------------------------------------- */}
     </>
