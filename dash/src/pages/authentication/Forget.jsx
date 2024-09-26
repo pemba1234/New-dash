@@ -8,7 +8,7 @@ export default function Forget() {
       <div className="login d-flex align-items-center">
         <form
           action=""
-          className="form d-flex col-4 flex-column shadow-lg p-5 bg-white"
+          className="form d-flex flex-column shadow-lg p-5 bg-white"
         >
           <header className="d-flex justify-content-center mb-3 fs-2">
             sneat
@@ -33,7 +33,7 @@ export default function Forget() {
             Send Reset Link
           </button>
           <div className="footer d-flex mt-4 justify-content-center">
-            <Link to="/login">
+            <Link to="/login" className="text-primary">
               <FaAngleLeft />
               Back to login
             </Link>

@@ -8,6 +8,8 @@ import Stack from '@mui/material/Stack';
 import { PieChart } from '@mui/x-charts/PieChart';
 
 
+
+
 const data = [
   { label: 'Group A', value: 400 },
   { label: 'Group B', value: 300 },
@@ -60,15 +62,40 @@ export default function Crm() {
               <div className="box d-flex col-12 flex-lg-row flex-md-row flex-column">
                 <div
                   class="col-lg-6 col-md-5 col-11 bg-white shadow mb-3 me-3"
-                  id="column"
-                >
-                  Box-3
+                  id="column">
+
+<LineChart
+      xAxis={[{ data: [1, 2, 3, 5, 8, 10, 12, 15, 16] }]}
+      series={[
+        {
+          data: [2, 5.5, 2, 8.5, 1.5, 5],
+          valueFormatter: (value) => (value == null ? 'NaN' : value.toString()),
+        },
+        {
+          data: [null, null, null, null, 5.5, 2, 8.5, 1.5, 5],
+        },
+        {
+          data: [7, 8, 5, 4, null, null, 2, 5.5, 1],
+          valueFormatter: (value) => (value == null ? '?' : value.toString()),
+        },
+      ]}
+      height={200}
+      margin={{ top: 35, bottom: 45 }}
+    />
+                
                 </div>
                 <div
                   class="col-lg-6 col-md-5 col-11 bg-white shadow mb-3"
-                  id="column"
-                >
-                  Box-4
+                  id="column">
+                  <LineChart
+  series={[
+    { curve: "linear", data: [0, 5, 2, 6, 3, 9.3] },
+    { curve: "linear", data: [6, 3, 7, 9.5, 4, 2] },
+  ]}
+ 
+/>
+                  
+    
                 </div>
               </div>
               <div
@@ -105,7 +132,7 @@ export default function Crm() {
               Box-6
             </div>
             <div class="col-6 border ms-3 me-3 mb-3" id="column">
-              Box-7
+              Box-7  
             </div>
           </div> */}
           {/* 

@@ -28,11 +28,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Nav() {
-  const [isCollapsed, setIsCollapsed] = useState(true);
-  const usetoggle = () => setIsCollapsed(!isCollapsed);
+  // const [isCollapsed, setIsCollapsed] = useState(true);
+  // const usetoggle = () => setIsCollapsed(!isCollapsed);
   return (
     <>
-      <nav className="show shadow bg-white position-fixed ps-2" id="navbar">
+      <nav
+        className="show shadow bg-white position-fixed ps-2"
+        id="navbarToggle"
+      >
         <div className="hero mb-1 bg-white">
           <div className="d-flex pt-2 justify-content-center bg-white mb-3  position-fixed fs-2">
             <div className="me-2 text-primary">
@@ -45,28 +48,28 @@ export default function Nav() {
         <div className="accordion" id="Navbar">
           <div className="component mb-3 pt-2 mt-4">
             <button
-              onClick={usetoggle}
+              // onClick={usetoggle}
               className="d-flex border-0 bg-white "
               data-bs-toggle="collapse"
               href="#dashboardCollapse"
               aria-controls="dashboardCollapse"
               id="dash"
             >
-              <div className="text d-flex align-items-center mt-2 ps-1 p-2 border-0 rounded-2">
+              <div className="text d-flex justify-content-between mt-2 ps-1 p-2 border-0 rounded-2">
                 <div>
                   <FontAwesomeIcon icon={faHouse} className="icon me-3 ms-2" />
                   Dashboard
                 </div>
                 <div className="d-flex">
-                  <span className="five bg-danger text-white ms-2">5</span>
-                  <div id="angle" className="ms-2 me-1">
+                  <span className="five bg-danger text-white">5</span>
+                  <div id="angle" className="ms-2 ">
                     <FontAwesomeIcon icon={faAngleRight} />
                   </div>
                 </div>
               </div>
             </button>
             <div
-              className="collapse"
+              className="collapse show"
               id="dashboardCollapse"
               data-bs-parent="#Navbar"
             >
@@ -114,12 +117,14 @@ export default function Nav() {
               aria-expanded="false"
               aria-controls="layoutCollapse"
             >
-              <div className="common-style d-flex align-items-center">
+              <div className="d-flex w-100 align-items-center justify-content-between me-4">
                 <div className="icon me-3 ms-3">
-                  <FontAwesomeIcon icon={faBorderAll} />
+                  <FontAwesomeIcon icon={faBorderAll} className="me-3" />
+                  Layout
                 </div>
-                Layout
-                <div className="ms-4"></div>
+                <div id="angle" className="ms-2 me-1">
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </div>
               </div>
             </a>
             <div
@@ -171,11 +176,14 @@ export default function Nav() {
               aria-expanded="false"
               aria-controls="fontPagesCollapse"
             >
-              <div className="common-style d-flex align-items-center">
+              <div className="d-flex align-items-center justify-content-between w-100 me-4">
                 <div className="ico me-3 ms-3">
-                  <FontAwesomeIcon icon={faHotel} />
+                  <FontAwesomeIcon icon={faHotel} className="me-3" />
+                  Font Pages
                 </div>
-                Font Pages
+                <div id="angle" className="ms-2 me-1">
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </div>
               </div>
             </a>
             <div
@@ -258,16 +266,21 @@ export default function Nav() {
           {/* ---------------------------Account Setting------------------------- */}
           <div className="mt-3">
             <a
-              className="d-flex align-items-center"
+              className="d-flex align-items-center border-0 bg-white w-100"
               href="#accountCollapse"
               data-bs-toggle="collapse"
               aria-controls="accountCollapse"
               aria-expanded="false"
             >
-              <div className="ico me-3 ms-3">
-                <FontAwesomeIcon icon={faSquareMinus} />
-              </div>
-              <div className="common-style">Account Setting</div>
+              <d className="d-flex justify-content-between w-100 me-4 ">
+                <div className="ms-3">
+                  <FontAwesomeIcon icon={faSquareMinus} className="me-3" />
+                  Account Setting
+                </div>
+                <div id="angle" className="ms-2 me-1">
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </div>
+              </d>
             </a>
             <div
               className="collapse"
@@ -304,10 +317,15 @@ export default function Nav() {
               href="#authenCollapse"
               data-bs-toggle="collapse"
             >
-              <div className="ico me-3 ms-3">
-                <FontAwesomeIcon icon={faUnlockKeyhole} />
+              <div className="d-flex w-100 justify-content-between me-4">
+                <div className="ico me-3 ms-3">
+                  <FontAwesomeIcon icon={faUnlockKeyhole} className="me-3" />
+                  Authentication
+                </div>
+                <div id="angle" className="ms-2 me-1">
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </div>
               </div>
-              <div className="common-style">Authentication</div>
             </a>
             <div
               className="collapse"
@@ -353,10 +371,15 @@ export default function Nav() {
               aria-expanded="false"
               aria-controls="miscCollapse"
             >
-              <div className="ico me-3 ms-3">
-                <FontAwesomeIcon icon={faDiceD6} />
+              <div className="d-flex justify-content-between w-100 me-4">
+                <div className="ms-3">
+                  <FontAwesomeIcon icon={faDiceD6} className="me-3" />
+                  Mics
+                </div>
+                <div id="angle" className="ms-2 me-1">
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </div>
               </div>
-              <div className="common-style">Mics</div>
             </a>
             <div
               className="collapse"
@@ -399,10 +422,15 @@ export default function Nav() {
               aria-controls="userCollapse"
               aria-expanded="false"
             >
-              <div className="ico me-3 ms-3">
-                <FontAwesomeIcon icon={faBoxArchive} />
+              <div className="d-flex w-100 justify-content-between me-4">
+                <div className="ms-3">
+                  <FontAwesomeIcon icon={faBoxArchive} className="me-3" />
+                  User Interface
+                </div>
+                <div id="angle" className="">
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </div>
               </div>
-              <div className="common-style">User Interface</div>
             </a>
             <div
               className="collapse"
@@ -499,10 +527,15 @@ export default function Nav() {
               href="#extendedCollapse"
               data-bs-toggle="collapse"
             >
-              <div className="ico me-3 ms-3">
-                <FontAwesomeIcon icon={faNewspaper} />
+              <div className="d-flex justify-content-between me-4 w-100">
+                <div className="ico me-3 ms-3">
+                  <FontAwesomeIcon icon={faNewspaper} className="me-3" />
+                  Extended UI
+                </div>
+                <div id="angle" className="">
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </div>
               </div>
-              <div className="common-style">Extended UI</div>
             </a>
             <div
               className="collapse"
@@ -548,10 +581,15 @@ export default function Nav() {
               href="#formTCollapse"
               data-bs-toggle="collapse"
             >
-              <div className="ico me-3 ms-3">
-                <FontAwesomeIcon icon={faRectangleList} />
+              <div className="d-flex w-100 justify-content-between me-4">
+                <div className="ms-3">
+                  <FontAwesomeIcon icon={faRectangleList} className="me-3" />
+                  Form Elements
+                </div>
+                <div id="angle" className="">
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </div>
               </div>
-              <div className="common-style">Form Elements</div>
             </a>
             <div
               className="collapse"
@@ -574,17 +612,22 @@ export default function Nav() {
               </ul>
             </div>
           </div>
-          {/* ------------------ extended ui ---------------- */}
+          {/* ------------------ Form Layout ---------------- */}
           <div className="mt-3">
             <a
               className="d-flex align-items-center"
               href="#formLCollapse"
               data-bs-toggle="collapse"
             >
-              <div className="ico me-3 ms-3">
-                <FontAwesomeIcon icon={faIndent} />
+              <div className="d-flex w-100 me-4 justify-content-between">
+                <div className="ms-3">
+                  <FontAwesomeIcon icon={faIndent} className="me-3" />
+                  Form Layouts
+                </div>
+                <div id="angle" className="">
+                  <FontAwesomeIcon icon={faAngleRight} />
+                </div>
               </div>
-              <div className="common-style">Form Layouts</div>
             </a>
             <div
               className="collapse"

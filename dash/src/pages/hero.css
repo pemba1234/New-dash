@@ -15,3 +15,24 @@ section .text-primary{
     width:100px;
     font-size: 15px;
 }
+
+.pie{
+    background-color: rgb(226, 255, 183);
+    color: green;
+    width: 45px;
+}
+.folder{
+    background-color: rgb(205, 239, 254);
+    color: rgb(66, 218, 249);
+    width: 45px;
+}
+.paypal{
+    background-color: rgb(255, 209, 183);
+    color: rgb(241, 99, 92);
+    width: 45px;
+}
+.credit{
+    background-color: rgb(236, 217, 255);
+    color: rgb(168, 125, 255);
+    width: 45px;
+}

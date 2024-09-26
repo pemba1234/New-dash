@@ -2,6 +2,13 @@
     display: none;
 }
 
+.profile img{
+    width: 30px;
+}
+
+.search {
+    height:75px ;
+}
 
 @media only screen and (max-width: 1260px){
 .ms-2 button{
