@@ -63,7 +63,7 @@ export default function Register() {
           <div className="footer d-flex mt-4 justify-content-center">
             <p>
               Already have an account?{" "}
-              <Link to="/create" className="primary">
+              <Link to="/create" className="text-primary">
                 {" "}
                 Sign in instead
               </Link>

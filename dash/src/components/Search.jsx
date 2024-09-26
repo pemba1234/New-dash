@@ -1,17 +1,19 @@
+import "./search.css";
+import profile from "../assets/profile.jpg";
+// ------------------logos ----------------------
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import "./search.css";
 import { IoSearch } from "react-icons/io5";
-import profile from "../assets/profile.jpg";
 import { IoPerson } from "react-icons/io5";
 import { IoMdSettings } from "react-icons/io";
 import { IoIosCard } from "react-icons/io";
 import { IoPower } from "react-icons/io5";
+import { FaStar } from "react-icons/fa";
 
 export default function Search() {
   return (
     <>
-      <div className="d-lg-flex col-12 justify-content-end">
+      <div className="search d-lg-flex col-12 justify-content-end">
         <div
           className="rounded-3 p-3 d-flex bg-white border-0 me-lg-5
       justify-content-between shadow col-lg-9 col-12 mt-3"
@@ -25,6 +27,10 @@ export default function Search() {
             />
           </div>
           <div className="ms-2 d-flex">
+            <div className="d-flex border bg-light me-3 pt-1 rounded">
+              <FaStar className="fs-5 ms-2 me-3 text-secondary rounded" />
+              <p className="me-2">967</p>
+            </div>
             <div className="profile dropdown">
               <img src={profile} alt="Profile" data-bs-toggle="dropdown" />
               <ul className="dropdown-menu">
