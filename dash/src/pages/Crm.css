@@ -7,63 +7,14 @@
     width: 65%;
 }
 
-#column3{
-    margin-left: 183%;
-    margin-top: -23px;
-    height: 300px;
-    width: 127%;
-}
 
 
-#column4{
-    height: 300px;
-    width: 87%;
-
-}
-
-#column5{
-    margin-left: 95%;
-    margin-top: -94%;
-    height: 300px;
-
-}
-
-#column6{
-    height: 330px;
-    width: 120%;
-}
 
 
-#column7{
-
-    width: 210%;
-
-}
-
-.footer-bottom{
-  
-     justify-content: space-between;
-     font-size: 15px;
-}
 
 
-.footer-bootom-left{
-    margin-top: 35px;
-    display: flex;
-    margin-left: 15px;
-}
 
-.footer-boottom-right{
-    margin-left: 120%;
-    margin-top: -39px;
-    display: flex;
-    gap: 20px;
-    color: #696cff;
-}
 
-.Th{
-    color: #696cff;
-}
 
 
 
@@ -83,15 +34,6 @@
         height: 300px;
     }
 
-    #column4{
-        height: 300px;
-        width: 87%;
-    
-    }
+  
 
-    #column7{
-
-        width: 210%;
-    
-    }
 }
