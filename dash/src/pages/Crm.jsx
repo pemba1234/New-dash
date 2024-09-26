@@ -1,6 +1,22 @@
+
 import "./Crm.css";
 import Nav from "../components/Nav";
 import Search from "../components/Search";
+import { LineChart } from '@mui/x-charts/LineChart';
+import { BarChart } from '@mui/x-charts/BarChart';
+import Stack from '@mui/material/Stack';
+import { PieChart } from '@mui/x-charts/PieChart';
+
+
+
+
+const data = [
+  { label: 'Group A', value: 400 },
+  { label: 'Group B', value: 300 },
+  { label: 'Group C', value: 300 },
+  { label: 'Group D', value: 200 },
+];
+
 
 export default function Crm() {
   return (
@@ -14,12 +30,31 @@ export default function Crm() {
             <div class="col-11 ms-lg-4 me-2 col-lg-9 mb-3 mb-lg-0 d-lg-flex ms-lg-2 me-3 me-lg-5">
               <div
                 class="col-lg-6 col-12 bg-white shadow me-3 mb-3"
-                id="column1"
-              >
-                Box-1
-              </div>
+                id="column1">
+             
+                   <LineChart
+      xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
+      series={[
+        {
+          data: [2, -5.5, 2, -7.5, 1.5, 6],
+          area: true,
+          baseline: 'min',
+        },
+      ]}
+    
+      height={200}
+    />
+                  
+     
+                </div>
+          
               <div class="col-lg-6 col-12 bg-white shadow mb-3" id="column1">
-                Box-2
+              <BarChart
+      xAxis={[{ scaleType: 'band', data: ['group A', 'group B', 'group C'] }]}
+      series={[{ data: [4, 3, 5] }, { data: [1, 6, 3] }, { data: [2, 5, 6] }]}
+      height={250}
+     
+    />
               </div>
             </div>
             {/* ---------------another box ------------------ */}
@@ -27,22 +62,67 @@ export default function Crm() {
               <div className="box d-flex col-12 flex-lg-row flex-md-row flex-column">
                 <div
                   class="col-lg-6 col-md-5 col-11 bg-white shadow mb-3 me-3"
-                  id="column"
-                >
-                  Box-3
+                  id="column">
+
+<LineChart
+      xAxis={[{ data: [1, 2, 3, 5, 8, 10, 12, 15, 16] }]}
+      series={[
+        {
+          data: [2, 5.5, 2, 8.5, 1.5, 5],
+          valueFormatter: (value) => (value == null ? 'NaN' : value.toString()),
+        },
+        {
+          data: [null, null, null, null, 5.5, 2, 8.5, 1.5, 5],
+        },
+        {
+          data: [7, 8, 5, 4, null, null, 2, 5.5, 1],
+          valueFormatter: (value) => (value == null ? '?' : value.toString()),
+        },
+      ]}
+      height={200}
+      margin={{ top: 35, bottom: 45 }}
+    />
+                
                 </div>
                 <div
                   class="col-lg-6 col-md-5 col-11 bg-white shadow mb-3"
-                  id="column"
-                >
-                  Box-4
+                  id="column">
+                  <LineChart
+  series={[
+    { curve: "linear", data: [0, 5, 2, 6, 3, 9.3] },
+    { curve: "linear", data: [6, 3, 7, 9.5, 4, 2] },
+  ]}
+ 
+/>
+                  
+    
                 </div>
               </div>
               <div
                 class="col-lg-12 col-11 bg-white shadow mb-3 ms-lg-2 rounded"
-                id="column"
-              >
-                Box-5
+                id="column">
+                     <Stack direction="row">
+      <PieChart
+        series={[
+          {
+            startAngle: 0,
+            endAngle:360,
+            paddingAngle: 4,
+            innerRadius: 50,
+            outerRadius: 70,
+            data,
+          },
+        ]}
+        margin={{ right: 5 }}
+        height={200}
+        slotProps={{
+          legend: { hidden: true },
+        }}
+      />
+    </Stack>
+                    
+
+
               </div>
             </div>
           </div>
@@ -55,69 +135,10 @@ export default function Crm() {
               Box-7  
             </div>
           </div> */}
-
-          <div
-            class="col-lg-7 col-12 bg-white shadow me-3 mb-3 ms-4 rounded"
-            id="column2"
-          >
-            Box-1
-            <div class="d-flex flex-column  col-lg-7 col-12">
-              <div className="box d-flex col-12 flex-lg-row flex-md-row flex-column">
-                <div
-                  class="col-lg-6 col-md-5 col-11 bg-white shadow mb-3 me-3 rounded"
-                  id="column3"
-                >
-                  Box-5
-                </div>
-              </div>
-              <div className="container">
-                <div className="row">
-                  <div
-                    className=" col-sm-9 border-1 shadow bg-white rounded "
-                    id="column4"
-                  >
-                    column
-                  </div>
-                  <div
-                    className=" col-sm-9 border-1 shadow  bg-white  rounded "
-                    id="column5"
-                  >
-                    column
-                  </div>
-
-                  <div className="container  ">
-                    <div className="row ">
-                      <div className="col d-flex ">
-                        <div
-                          className="mt-4 col-lg-12 col-12 float-lg-end col-md-12 bg-white  rounded "
-                          id="column6"
-                        >
-                          column7
-                        </div>
-
-                        <div
-                          className="mt-4 ms-3 col-lg-12 col-12 float-lg-end col-md-12 bg-white  rounded"
-                          id="column7"
-                        >
-                          column9
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="footer-bottom">
-              <p className="footer-bootom-left">© 2024, made with ❤️ <span className="Th">by ThemeSelection</span>
-              </p>
-              <div className="footer-boottom-right">
-                <p>License</p>
-                <p>License</p>
-                <p>Documentation</p>
-                <p>Support</p>
-              </div>
-            </div>
-          </div>
+          {/* 
+          <div className="col-lg-10">
+            <div className="ms-3 col-lg-9 col-12 float-lg-end col-md-12">
+              {/* --------------------top box pair------------------ */}
         </div>
       </div>
     </>
