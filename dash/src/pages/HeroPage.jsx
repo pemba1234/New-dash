@@ -301,14 +301,20 @@ export default function HeroPage() {
         </div>
         {/* ------------------2nd div close----------- */}
         <div className="col-11">
-          <div className="d-flex col-10 float-end justify-content-between ">
-            <div className="col-3 border  border-success shadow rounded">
-              Hello{" "}
+          <div className="d-flex col-10 float-end justify-content-between mt-3 ">
+            <div className="col-3 border bg-white border-success shadow rounded">
+              <table>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </table>
             </div>
-            <div className="col-3 border  border-success shadow rounded">
+            <div className="col-3 border bg-white border-success shadow rounded">
               Hello
             </div>
-            <div className="col-3 border  border-success shadow rounded">
+            <div className="col-3 border bg-white border-success shadow rounded">
               Hello
             </div>
           </div>
