@@ -33,7 +33,7 @@ export default function Search() {
             </div>
             <div className="profile dropdown">
               <img src={profile} alt="Profile" data-bs-toggle="dropdown" />
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu border-0 shadow-lg">
                 <li className="dropdown-item">
                   <IoPerson className="me-2 text-secondary fs-5" />
                   My Profile
@@ -44,7 +44,7 @@ export default function Search() {
                 </li>
                 <li className="dropdown-item">
                   <IoIosCard className="me-2 text-secondary fs-5" />
-                  Billing Plan
+                  Bilang Plan
                 </li>
                 <hr />
                 <li className="dropdown-item">
