@@ -65,7 +65,7 @@ export default function Login() {
               New on our platform?
               <Link to="/register" className="text-primary">
                 {" "}
-                Create an account
+                Create an account,
               </Link>
             </p>
           </div>
