@@ -126,6 +126,7 @@ export default function Crm() {
               </div>
             </div>
           </div>
+          <h1>hello</h1>
           {/* ---------another box--------------------- */}
           {/* <div class="row border mb-3">
             <div class="col-6 border ms-3 me-3 mb-3" id="column">
