@@ -22,6 +22,7 @@ export default function HeroPage() {
   return (
     <>
       <Nav />
+    
       <Search />
       <div className="col-lg-11 float-lg-end">
         {/* -------------top div------------ */}
