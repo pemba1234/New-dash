@@ -1,76 +1,96 @@
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
-import { Link } from "react-router-dom";
-// import { useState, useEffect } from "react";
-// import { getData } from "../api/AxiosRequest";
 
 export default function Login() {
-  // const [Authentication, setAuthentication] = useState([]);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
-  // const getAuthentication = async () => {
-  //   const data = await getData("authentications");
-  //   setAuthentication(data);
-  // };
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const validEmail = "admin";
+    const validPassword = "admin";
 
-  // useEffect(() => {
-  //   getAuthentication();
-  // }, []);
+    if (email === validEmail && password === validPassword) {
+      setError(null);
+      navigate("/");
+    } else {
+      setError("Invalid email or password");
+    }
+  };
 
   return (
-    <>
-      <div className="login d-flex align-items-center">
-        <form
-          action=""
-          className="form d-flex flex-column shadow-lg p-5 bg-white"
-        >
-          <header className="d-flex justify-content-center mb-3 fs-2">
-            sneat
-          </header>
-          <div className="col-10 mb-3">
-            <h3 className="">Welcome to sneat! 👋</h3>
-            <span className="text-secondary">
-              Please sign-in to your account and start the adventure
-            </span>
-          </div>
-          <label htmlFor="Email" className="label">
+    <div className="login d-flex align-items-center justify-content-center vh-100">
+      <form
+        className="form d-flex flex-column shadow-lg p-5 bg-white rounded-3"
+        onSubmit={handleLogin}
+      >
+        <header className="d-flex justify-content-center mb-4 fs-2">
+          Sneat
+        </header>
+        <div className="col-12 mb-4 text-center">
+          <h3>Welcome to Sneat! 👋</h3>
+          <p className="text-secondary">
+            Please sign in to your account and start the adventure.
+          </p>
+        </div>
+
+        {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
+
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">
             Email or Username
           </label>
           <input
             type="text"
-            className="border-1 rounded-3 m-2 p-1 ps-3 pe-3"
-            placeholder="Enter Your Email or Password"
+            id="email"
+            className="form-control"
+            placeholder="Enter your email or username"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <label htmlFor="password" className="label mt-3">
+        </div>
+
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">
             Password
           </label>
           <input
             type="password"
-            className="border-1 rounded-3 m-2 p-1 ps-3 pe-3"
-            placeholder="..........."
+            id="password"
+            className="form-control"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <div className="two d-flex justify-content-between p-2 mt-3 mb-3">
-            <label htmlFor="">
-              <input type="checkbox" /> Remember me
-            </label>
-            <Link to="/forget-password" className="text-primary">
-              Forget Password?
+        </div>
+
+        <div className="d-flex justify-content-between align-items-center mb-4">
+          <label>
+            <input type="checkbox" /> Remember me
+          </label>
+          <Link to="/forget-password" className="text-primary">
+            Forgot Password?
+          </Link>
+        </div>
+
+        <button type="submit" className="btn btn-primary w-100 mb-3">
+          Login
+        </button>
+
+        <div className="text-center">
+          <p>
+            New on our platform?{" "}
+            <Link to="/register" className="text-primary">
+              Create an account
             </Link>
-          </div>
-          <button className="border-0 bg-primary text-white rounded-3 p-2">
-            Login
-          </button>
-          <div className="footer d-flex mt-4 justify-content-center">
-            <p>
-              New on our platform?
-              <Link to="/register" className="text-primary">
-                {" "}
-                Create an account
-              </Link>
-            </p>
-          </div>
-        </form>
-      </div>
-    </>
+          </p>
+        </div>
+      </form>
+    </div>
   );
 }
