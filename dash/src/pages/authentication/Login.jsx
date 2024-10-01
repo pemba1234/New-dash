@@ -1,8 +1,11 @@
+// /src/pages/authentication/Login.jsx
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext"; // Adjusted path
 import "./login.css";
 
 export default function Login() {
+  const { login } = useAuth(); // Use the login function from context
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -10,12 +13,13 @@ export default function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    const validEmail = "admin";
+    const validEmail = "admin@gmail.com";
     const validPassword = "admin";
 
     if (email === validEmail && password === validPassword) {
       setError(null);
-      navigate("/");
+      login({ email }); // Pass user data to login function
+      navigate("/hero"); // Redirect to hero page after login
     } else {
       setError("Invalid email or password");
     }
@@ -36,9 +40,7 @@ export default function Login() {
             Please sign in to your account and start the adventure.
           </p>
         </div>
-
         {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
-
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
             Email or Username
@@ -53,7 +55,6 @@ export default function Login() {
             required
           />
         </div>
-
         <div className="mb-3">
           <label htmlFor="password" className="form-label">
             Password
@@ -68,7 +69,6 @@ export default function Login() {
             required
           />
         </div>
-
         <div className="d-flex justify-content-between align-items-center mb-4">
           <label>
             <input type="checkbox" /> Remember me
@@ -77,11 +77,9 @@ export default function Login() {
             Forgot Password?
           </Link>
         </div>
-
         <button type="submit" className="btn btn-primary w-100 mb-3">
           Login
         </button>
-
         <div className="text-center">
           <p>
             New on our platform?{" "}
