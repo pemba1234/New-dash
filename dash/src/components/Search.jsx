@@ -11,6 +11,12 @@ import { IoPower } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
 
 export default function Search() {
+  function Menu() {
+    let x = document.getElementById("navbar");
+
+    x.classList.toggle("show");
+  }
+
   return (
     <>
       <div className="search d-lg-flex col-12 justify-content-end">
@@ -33,7 +39,7 @@ export default function Search() {
             </div>
             <div className="profile dropdown">
               <img src={profile} alt="Profile" data-bs-toggle="dropdown" />
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu border-0 shadow-lg">
                 <li className="dropdown-item">
                   <IoPerson className="me-2 text-secondary fs-5" />
                   My Profile
@@ -44,7 +50,7 @@ export default function Search() {
                 </li>
                 <li className="dropdown-item">
                   <IoIosCard className="me-2 text-secondary fs-5" />
-                  Billing Plan
+                  Bilang Plan
                 </li>
                 <hr />
                 <li className="dropdown-item">
@@ -53,16 +59,9 @@ export default function Search() {
                 </li>
               </ul>
             </div>
-            <button
-              className="navbar-toggler ms-2"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarToggle"
-              aria-controls="navbarToggle"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+            <a className=" ms-2" onClick={Menu}>
               <FontAwesomeIcon icon={faBars} />
-            </button>
+            </a>
           </div>
         </div>
       </div>
