@@ -52,7 +52,7 @@ export default function Register() {
           <div className="two d-flex justify-content-between p-2 mt-3 mb-3">
             <label htmlFor="">
               <input type="checkbox" /> I agree to{" "}
-              <Link to="/forget" className="text-primary">
+              <Link to="" className="text-primary">
                 privacy policy & terms
               </Link>
             </label>
@@ -63,7 +63,7 @@ export default function Register() {
           <div className="footer d-flex mt-4 justify-content-center">
             <p>
               Already have an account?{" "}
-              <Link to="/create" className="text-primary">
+              <Link to="" className="text-primary">
                 {" "}
                 Sign in instead
               </Link>

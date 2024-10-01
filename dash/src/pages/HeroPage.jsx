@@ -26,7 +26,7 @@ export default function HeroPage() {
       <Search />
       <div className="col-lg-11 float-lg-end">
         {/* -------------top div------------ */}
-        <div className="parent col-lg-10 d-lg-flex float-end me-4 mt-4 h-auto">
+        <div className="parent col-lg-10 d-lg-flex float-end me-4 mt-lg-4 mt-2 h-auto">
           <div
             className="bg-white border-0 shadow rounded me-lg-3 me-2 p-3
           pb-0 d-flex flex-row justify-content-between col-lg-8 col-12"
@@ -207,77 +207,79 @@ export default function HeroPage() {
           </div>
           {/* -------------------------------------------- */}
           <div className="d-lg-flex flex-column col-lg-4 col-12">
-            <div className="d-flex col-lg-11">
-              <div className="box col-lg-6 h-auto col-6 shadow rounded h-100 bg-white me-3 p-4">
-                <div className="d-flex justify-content-between">
-                  <div className="paypal p-2 border-0 rounded mb-2">
-                    <IoLogoPaypal className="fs-4" />
-                  </div>
-                  <div className="dropdown">
-                    <BsThreeDotsVertical
-                      className="fs-4 p-1"
-                      data-bs-toggle="dropdown"
-                    />
+            <div className="col-lg-10">
+              <div className="d-flex col-lg-12">
+                <div className="box col-lg-6 h-auto col-6 shadow rounded h-100 bg-white me-3 p-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="paypal p-2 border-0 rounded mb-2">
+                      <IoLogoPaypal className="fs-4" />
+                    </div>
+                    <div className="dropdown">
+                      <BsThreeDotsVertical
+                        className="fs-4 p-1"
+                        data-bs-toggle="dropdown"
+                      />
 
-                    <ul className="dropdown-menu position-absolute  border-1 shadow">
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          View More
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          Delete
-                        </a>
-                      </li>
-                    </ul>
+                      <ul className="dropdown-menu position-absolute  border-1 shadow">
+                        <li>
+                          <a className="dropdown-item" href="#">
+                            View More
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item" href="#">
+                            Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
+                  <span className="text-secondary">Payments</span>
+                  <br />
+                  <span className="fs-4">$2,456</span>
+                  <br />
+                  <br />
+                  <span className="text-danger">
+                    <FaLongArrowAltUp className="me-2" />
+                    +14.80%
+                  </span>
                 </div>
-                <span className="text-secondary">Payments</span>
-                <br />
-                <span className="fs-4">$2,456</span>
-                <br />
-                <br />
-                <span className="text-danger">
-                  <FaLongArrowAltUp className="me-2" />
-                  +14.80%
-                </span>
-              </div>
-              {/* ---------------------------------------------- */}
-              <div className="box col-lg-6 h-auto col-6 shadow rounded h-100 bg-white me-3 p-4">
-                <div className="d-flex justify-content-between">
-                  <div className="credit p-2 border-0 rounded mb-2">
-                    <FaRegCreditCard className="fs-4" />
-                  </div>
-                  <div className="dropdown">
-                    <BsThreeDotsVertical
-                      className="fs-4 p-1"
-                      data-bs-toggle="dropdown"
-                    />
+                {/* ---------------------------------------------- */}
+                <div className="box col-lg-6 h-auto col-6 shadow rounded h-100 bg-white me-3 p-4">
+                  <div className="d-flex justify-content-between">
+                    <div className="credit p-2 border-0 rounded mb-2">
+                      <FaRegCreditCard className="fs-4" />
+                    </div>
+                    <div className="dropdown">
+                      <BsThreeDotsVertical
+                        className="fs-4 p-1"
+                        data-bs-toggle="dropdown"
+                      />
 
-                    <ul className="dropdown-menu position-absolute  border-1 shadow">
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          View More
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          Delete
-                        </a>
-                      </li>
-                    </ul>
+                      <ul className="dropdown-menu position-absolute  border-1 shadow">
+                        <li>
+                          <a className="dropdown-item" href="#">
+                            View More
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item" href="#">
+                            Delete
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
+                  <span className="text-secondary">Transaction</span>
+                  <br />
+                  <span className="fs-4">$14,628</span>
+                  <br />
+                  <br />
+                  <span className="text-success">
+                    <FaLongArrowAltUp className="me-2" />
+                    +28.14%
+                  </span>
                 </div>
-                <span className="text-secondary">Transaction</span>
-                <br />
-                <span className="fs-4">$14,628</span>
-                <br />
-                <br />
-                <span className="text-success">
-                  <FaLongArrowAltUp className="me-2" />
-                  +28.14%
-                </span>
               </div>
             </div>
             {/* ------------------------------------------ */}
@@ -299,26 +301,6 @@ export default function HeroPage() {
             {/* -------------------------------- */}
           </div>
           {/* ------------------------------------------------ */}
-        </div>
-        {/* ------------------2nd div close----------- */}
-        <div className="col-11">
-          <div className="d-flex col-10 float-end justify-content-between mt-3 ">
-            <div className="col-3 border bg-white border-success shadow rounded">
-              <table>
-                <tr>
-                  <th></th>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </table>
-            </div>
-            <div className="col-3 border bg-white border-success shadow rounded">
-              Hello
-            </div>
-            <div className="col-3 border bg-white border-success shadow rounded">
-              Hello
-            </div>
-          </div>
         </div>
         {/* -----------last div--------------------- */}
       </div>
