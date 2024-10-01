@@ -28,14 +28,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Nav() {
-  // const [isCollapsed, setIsCollapsed] = useState(true);
-  // const usetoggle = () => setIsCollapsed(!isCollapsed);
   return (
     <>
-      <nav
-        className="show shadow bg-white position-fixed ps-2"
-        id="navbarToggle"
-      >
+      <nav className="show shadow bg-white position-fixed ps-2" id="navbar">
         <div className="hero mb-1 bg-white">
           <div className="d-flex pt-2 justify-content-center bg-white mb-3  position-fixed fs-2">
             <div className="me-2 text-primary">
