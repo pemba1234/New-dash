@@ -17,34 +17,18 @@ import "bootstrap/dist/js/bootstrap.bundle";
 
 export default function App() {
   return (
-    <AuthProvider>
+    <AuthContext.Provider value={{ user, login, logout }}>
       <Router>
         <Routes>
           <Route
             path="/"
-            element={<Navigate to="/login" />} // Redirect to login by default
+            element={user ? <Navigate to="/hero" /> : <Navigate to="/login" />}
           />
           <Route path="/login" element={<Login />} />
           <Route path="/forget-password" element={<Forget />} />
           <Route path="/register" element={<Register />} />
-          <Route
-            path="/hero"
-            element={
-              <ProtectedRoute>
-                <HeroPage />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/crm"
-            element={
-              <ProtectedRoute>
-                <Crm />
-              </ProtectedRoute>
-            }
-          />
         </Routes>
       </Router>
-    </AuthProvider>
+    </AuthContext.Provider>
   );
 }
